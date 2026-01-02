@@ -1,0 +1,13 @@
+1.select * form salgrade
+2.select deptno from dept
+3.select ename as ENAME, sal"SALARY", sal*0.05"5% INCREMENT" from emp
+4.select ename as ENAME, sal"SALARY", sal*0.05 "5% INCREMENT",sal*0.05+sal"NEW SALARY" from emp
+5.select *from emp where ename ='BLAKE'
+6.select ename ||'is hired on'||hiredate||'as a'||job"Employee Details" from emp
+7.describe salgrade
+describe dept
+describe emp
+describe bonus
+
+8.select distinct job from emp
+
