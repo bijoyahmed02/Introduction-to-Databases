@@ -1,0 +1,45 @@
+1.WHERE  LOWER(job) ='manager';
+
+2.SELECT CONCAT(ename,deptno),LENGTH(ename) FROM emp
+   WHERE LENGTH(ename)<=7;
+
+3.SELECT ename FROM emp
+  WHERE job LIKE '%ANA%';
+
+4.SELECT ROUND(79.78),TRUNC(79.78) FROM dual;
+
+5.SELECT sysdate FROM dual;
+
+6.SELECT MOD(comm,sal),ename,job FROM emp
+  WHERE job='MANAGER';
+
+7.SELECT ROUND((sysdate-hiredate)/30) FROM emp
+  WHERE ename=UPPER('Turner');
+
+8.SELECT NEXT_DAY('12-OCT-22','WEDNESDAY') FROM dual;
+
+9.SELECT ROUND((sysdate-hiredate)/30) FROM emp
+  WHERE ename='BLAKE';
+
+10.SELECT TO_CHAR(sal,'$99,99.99') FROM emp
+  WHERE ename='TURNER';
+
+11.SELECT ename,NVL(comm,0)*12"ANNUAL COMM" FROM emp;
+
+12.SELECT ename,job,sal,DECODE(job,'CLERK',sal+sal*0.02,'PRESIDENT',sal+sal*0.05,'SALESMENT',sal+sal*0.07,sal)change_salary FROM emp;
+
+13.SELECT INITCAP('I LOVE MY COUNTRY AND I LOVE MY JOB') FROM dual;
+
+14.SELECT 'The comm of '||ename||' is '||NVL(TO_CHAR(comm),'null') FROM emp;
+
+15.Create view Oview377 as Select O_ID, OP_Name, Joining, Job From Official
+Where O_ID = 377;
+
+Describe Oview377
+
+Select * from Oview377
+16.Create view TviewODI (maxODI) as Select T_No, MAX(ODI), Stadium, Gate From Tournament
+
+Describe  TviewODI
+
+select * from TviewODI
